@@ -726,6 +726,7 @@ body {
         transparent,
         var(--dark-color) 60%
       );
+      mask-image: linear-gradient(to top, transparent 30%, #079097 60%);
       -webkit-mask-image: linear-gradient(to top, transparent 30%, #079097 60%);
     }
 
@@ -948,6 +949,7 @@ body {
       height: 50vmin;
       border-top-left-radius: 100%;
       border-left: 2vmin solid #079097;
+      mask-image: linear-gradient(to top, transparent 25%, #079097 50%);
       -webkit-mask-image: linear-gradient(to top, transparent 25%, #079097 50%);
       position: relative;
       z-index: 1;
@@ -974,6 +976,12 @@ body {
         );
 
       -webkit-mask-image: linear-gradient(
+        135deg,
+        #fce700 40%,
+        transparent 50%,
+        transparent
+      );
+      mask-image: linear-gradient(
         135deg,
         #fce700 40%,
         transparent 50%,
@@ -1091,6 +1099,12 @@ body {
         #fce700 80%
       ) !important;
 
+      mask-image: linear-gradient(
+        to top,
+        transparent 40%,
+        #fce700 80%
+      ) !important;
+
       &--1 {
         --w: 5vmin;
         --h: 60vmin;
@@ -1114,6 +1128,12 @@ body {
         #fce700 80%
       ) !important;
 
+      mask-image: linear-gradient(
+        to top,
+        transparent 50%,
+        #fce700 80%
+      ) !important;
+
       &--1 {
         left: -1vmin;
         transform: rotateY(-180deg);
@@ -1130,6 +1150,12 @@ body {
         transparent 40%,
         #fce700 80%
       ) !important;
+
+      mask-image: linear-gradient(
+        to top,
+        transparent 40%,
+        #fce700 80%
+      ) !important;
     }
   }
 
@@ -1141,6 +1167,11 @@ body {
 
     .leaf {
       -webkit-mask-image: linear-gradient(
+        to top,
+        transparent 50%,
+        #fce700 80%
+      ) !important;
+      mask-image: linear-gradient(
         to top,
         transparent 50%,
         #fce700 80%
@@ -1183,6 +1214,12 @@ body {
     border-top-left-radius: 100%;
     border-left: 2vmin solid var(--c);
     -webkit-mask-image: linear-gradient(
+      to top,
+      transparent 20%,
+      var(--dark-color)
+    );
+
+    mask-image: linear-gradient(
       to top,
       transparent 20%,
       var(--dark-color)
