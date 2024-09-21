@@ -13,20 +13,24 @@ body{
     background-color: black;
 }
 .greetings {
+  display: flex;
+  flex-wrap: wrap; /* Allow words to wrap to the next line */
+  justify-content: center; /* Align words horizontally */
   font-size: 6rem;
   font-weight: 900;
   color: #696565;
   text-shadow: none;
 
-  > span {
-    animation: glow 4s ease-in-out infinite;
+  .word {
+    display: flex; /* Ensure letters in each word remain horizontal */
+    margin-right: 1rem; /* Space between words */
   }
-  // Remove this and change the above line's duration to 6s for a blink effect
-  @for $i from 1 through 13 {
-    > span:nth-child(#{$i}) {
-      animation-delay: $i * 0.2s; /* Increment delay for each letter */
-    }
+
+  /* Apply the glow animation to each letter */
+  .word > span {
+    animation: glow 5s ease-in-out infinite;
   }
+
 }
 
 @keyframes glow {
@@ -40,23 +44,6 @@ body{
   }
 }
 
-@keyframes blink {
-  0%, 100% {
-    color: #fff;
-    text-shadow: 0 0 12px #fbff00, 0 0 50px #fbff00, 0 0 100px #fbff00; /* Initial state */
-  }
-  50% {
-    color: #696565;
-    text-shadow: none; /* Blink state */
-  }
-}
-
-/* Blink effect applied after the glow animation completes, which doesn't work btw lol */
-.blink {
-  animation: blink 0.8s ease-out forwards; /* Duration of blink */
-  animation-delay: 0s;
-}
-
 .description{
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -68,19 +55,17 @@ body{
     color: #111;
 }
 
-@media screen and (max-width:574px){
+@media screen and (max-width:400px){
     .greetings{
-        display: block;
-        font-size: 3rem;
-        font-weight: 500;
-        text-align: center;
+      font-size: 3rem;
+      font-weight: 500;
     }
     .description{
-        font-size: 1rem;
+      font-size: 1rem;
     }
     
     .button a{
-        font-size: .5rem;
+      font-size: .75rem;
     }
 }
 
