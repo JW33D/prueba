@@ -22,7 +22,7 @@ body {
   text-shadow: none;
 }
 .greetings > span {
-  animation: glow 6.1s ease-in-out infinite;
+  animation: glow 4s ease-in-out infinite;
 }
 .greetings > span:nth-child(1) {
   animation-delay: 0.2s; /* Increment delay for each letter */
@@ -69,7 +69,7 @@ body {
     color: #fff;
     text-shadow: 0 0 12px #fbff00, 0 0 50px #fbff00, 0 0 100px #fbff00;
   }
-  10%, 90% {
+  15%, 85% {
     color: #696565;
     text-shadow: none;
   }

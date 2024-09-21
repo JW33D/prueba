@@ -19,7 +19,7 @@ body{
   text-shadow: none;
 
   > span {
-    animation: glow 6.1s ease-in-out infinite;
+    animation: glow 4s ease-in-out infinite;
   }
   // Remove this and change the above line's duration to 6s for a blink effect
   @for $i from 1 through 13 {
@@ -34,7 +34,7 @@ body{
     color: #fff;
     text-shadow: 0 0 12px #fbff00, 0 0 50px #fbff00, 0 0 100px #fbff00;
   }
-  10%, 90% {
+  15%, 85% {
     color: #696565;
     text-shadow: none;
   }
